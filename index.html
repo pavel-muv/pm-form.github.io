@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Панель управления студентами</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <body>
+    <div class="wrapper">
+      <h1>Панель управления студентами</h1>
+      <p></p>
+
+      <form class="form">
+        <label>Ф.И.О:<input class="serch-name" type="text" /></label>
+        <label
+          >дата рождения:<input
+            class="serch-birth"
+            type="text"
+            type="date"
+            min="01.01.1900" /></label
+        ><br />
+        <label
+          >год начала обучения:<input
+            class="serch-training"
+            type="text"
+            type="date"
+            min="01.01.2000" /></label
+        ><br />
+        <label
+          >Факультет:<input class="serch-faculty" type="text" type="text"
+        /></label>
+      </form>
+      <button class="serch-button">Найти студента</button>
+      <table class="table" border="1" width="100%" cellpadding="5">
+        <thead class="table__head">
+          <tr class="heading">
+            <th class="heading__name">Ф.И.О.</th>
+            <th class="heading__faculty">Факультет</th>
+            <th class="heading__birth">дата рождения</th>
+            <th class="heading__training">год начала обучения</th>
+          </tr>
+        </thead>
+        <tbody class="table-wrapper"></tbody>
+      </table>
+      <form class="form">
+        <label>Имя:<input class="inp-name" type="text" required /></label>
+        <label
+          >Фамилия:<input class="inp-surname" type="text" type="text" required
+        /></label>
+        <label
+          >Отчество:<input
+            class="inp-patronymic"
+            type="text"
+            type="text"
+            required /></label
+        ><br />
+        <label
+          >дата рождения:<input
+            class="inp-birth"
+            type="date"
+            id="start"
+            name="trip-start"
+            value="2005-07-22"
+            min="01.01.1900"
+            max="2018-12-31"
+            required /></label
+        ><br />
+        <label
+          >год начала обучения:<input
+            class="inp-training"
+            type="text"
+            type="number"
+            min="2000"
+            required /></label
+        ><br />
+        <label
+          >Факультет:<input
+            class="inp-faculty"
+            type="text"
+            type="text"
+            required
+        /></label>
+      </form>
+      <button class="button">Добавить студента</button>
+    </div>
+    <template id="tmp">
+      <tr class="student">
+        <td class="student__name"></td>
+        <td class="student__faculty"></td>
+        <td class="student__birth"><span class="age"></span></td>
+        <td class="student__training"><span class="course"></span></td>
+      </tr>
+    </template>
+
+    <script src="main.js"></script>
+  </body>
+</html>
